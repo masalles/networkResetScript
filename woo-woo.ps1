@@ -6,12 +6,14 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 # Execution of network commands
 Write-Host "`nResetting network settings... F.Y. ISP!" -ForegroundColor Cyan
-netsh winsock reset | Out-Null
-netsh int ip reset | Out-Null
-netsh advfirewall reset | Out-Null
-ipconfig /flushdns | Out-Null
 ipconfig /release | Out-Null
 ipconfig /renew | Out-Null
+ipconfig /flushdns | Out-Null
+netsh int ip delete arpcache | Out-Null
+netsh int ip reset | Out-Null
+netsh winsock reset | Out-Null
+netsh winsock reset proxy | Out-Null
+netsh advfirewall reset | Out-Null
 
 # Final Result
 Write-Host "`n✅ All set! Good luck with your internet! ;)" -ForegroundColor Green
