@@ -15,6 +15,7 @@ This PowerShell script **blasts away** your network issues by **resetting** crit
 ✅ **Resets IP Configuration** (Flushes old IP data)  
 ✅ **Clears Windows Firewall Rules** (Resets security policies)  
 ✅ **Flushes DNS Cache** (Improves name resolution)  
+✅ **Resets ARP Cache** (Fixes corrupted address resolution data)  
 ✅ **Releases & Renews IP Address** (Gets a fresh connection)  
 
 ---
